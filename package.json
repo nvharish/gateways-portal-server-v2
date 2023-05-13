@@ -1,0 +1,11 @@
+{
+  "name": "gateways-portal",
+  "version": "2.0.0",
+  "description": "The server side or backend of gateways portal, provides bunch of APIs and connects to various payment gateways",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "N V Harish",
+  "license": "ISC"
+}
