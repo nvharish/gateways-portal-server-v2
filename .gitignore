@@ -19,6 +19,3 @@ logs
 # Miscellaneous
 .DS_Store
 Thumbs.db
-
-#github actions
-/.github
