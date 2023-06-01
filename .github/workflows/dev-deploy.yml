@@ -1,0 +1,29 @@
+name: Backend Deployment
+
+on:
+  push:
+    paths-ignore:
+      - '.github/**'
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.KEY }}          
+          script: |
+            cd /var/www/gateways-portal/server/dev/
+            git pull
+            npm install --production
