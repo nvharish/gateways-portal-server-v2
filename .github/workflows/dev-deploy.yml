@@ -2,8 +2,6 @@ name: Backend Deployment
 
 on:
   push:
-    paths-ignore:
-      - '.github/**'
     branches:
       - dev
 
@@ -27,3 +25,4 @@ jobs:
             cd /var/www/gateways-portal/server/dev/
             git pull
             npm install --production
+            rm -rf ./.github
