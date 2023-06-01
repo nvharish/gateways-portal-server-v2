@@ -21,4 +21,4 @@ logs
 Thumbs.db
 
 #github actions
-/.github/workflows/dev-deploy.yml
+/.github
