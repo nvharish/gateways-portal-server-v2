@@ -26,3 +26,4 @@ jobs:
             git pull
             npm install --production
             rm -rf ./.github
+            pm2 restart gp-dev-api
